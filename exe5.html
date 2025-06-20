@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Grid Areas Exercise</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: 100px 300px 100px;
+      grid-template-areas: 
+        "header header header header"
+        "sidebar content content content"
+        "footer footer footer footer";
+      height: 100vh;
+      gap: 10px;
+      padding: 10px;
+      background-color: #f0f0f0;
+    }
+
+    .item {
+      padding: 20px;
+      color: white;
+      font-size: 24px;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 8px;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .item-1 {
+      grid-area: header;
+      background-color: #007bff;
+    }
+
+    .item-2 {
+      grid-area: content;
+      background-image: url('https://via.placeholder.com/600x300?text=GTA+5');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-color: #222;
+    }
+
+    .item-3 {
+      grid-area: sidebar;
+      background-image: url('https://via.placeholder.com/300x300?text=PUBG');
+      background-size: cover;
+    }
+
+    .item-4 {
+      grid-area: footer;
+      background-image: url('https://via.placeholder.com/600x100?text=COD');
+      background-size: cover;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="item item-1">Header</div>
+    <div class="item item-2">Content</div>
+    <div class="item item-3">Sidebar</div>
+    <div class="item item-4">Footer</div>
+  </div>
+
+</body>
+</html>
